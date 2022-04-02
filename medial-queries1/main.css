@@ -1,3 +1,56 @@
+/*********************************
+ * Build Helpers
+ *********************************/
+/* give each element a border */
+* {
+    border: 1px solid mediumvioletred;
+}
+
+/* shrink images for placement */
+/* img {
+    width: 100px;
+} */
+
 body {
   background: blanchedalmond;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: .5em;
+  gap: .5em;
+}
+
+.a {
+  flex-grow: 1;
+}
+
+.b {
+  min-height: 60vh;
+  flex-grow: 3;
+}
+
+.c {
+  flex-grow: 1;
+}
+
+
+@media (min-width: 600px) {
+  .container {
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-flow: row wrap;
+  }
+
+  .a {
+    width: 100%;
+  }
+  
+  a., .b, .c {
+    margin: 1em;
+  }
 }
